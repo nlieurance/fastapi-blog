@@ -9,3 +9,5 @@ When viewing the main.py file, you can see the list that stores blog posts in th
 # Storage for posts
 posts: list[Post] = [ ]
 ```
+## Dependencies
+The `requirements.txt` file lists all the dependencies that Render must install to build the app.
