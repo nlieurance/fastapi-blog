@@ -39,13 +39,13 @@ Feel like creating a new post? Check out this example code:
 
 ```python
 import requests
-
-# Get the API key
-API_KEY = os.getenv("BLOG_API_KEY")
+import os
 
 # You could paste this code into a new file, replace the payload with your own content,save the file with a .py extension, and run it in your computer's terminal.
 
 # This line imports the Python requests module
+
+API_KEY = os.getenv("BLOG_API_KEY")
 
 # This is the endpoint for creating posts
 url = "https://fastapi-blog-4lg9.onrender.com/posts"
@@ -57,7 +57,7 @@ headers = {
 
 # The payload is the content of your blog post, organized into three JSON key/value pairs
 payload = {
-    "title": "Another additional post",
+    "title": "One more additional post",
     "content": "This is yet another post from example2.py",
     "published": True
 }
@@ -69,6 +69,7 @@ r = requests.post(url, json=payload, headers=headers)
 post = r.json()
 
 # This prints some text in the terminal so you have the new post id
+print("Created post" , post['id'])
 ```
 
 
