@@ -40,6 +40,9 @@ Feel like creating a new post? Check out this example code:
 ```python
 import requests
 
+# Get the API key
+API_KEY = os.getenv("BLOG_API_KEY")
+
 # You could paste this code into a new file, replace the payload with your own content,save the file with a .py extension, and run it in your computer's terminal.
 
 # This line imports the Python requests module
