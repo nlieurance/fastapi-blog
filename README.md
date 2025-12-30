@@ -49,7 +49,7 @@ url = "https://fastapi-blog-4lg9.onrender.com/posts"
 
 # This adds the API key to the HTTP header, which is necessary for creating a post
 headers = {
-    "x-api-key": "supersecretkey"
+    "x-api-key": BLOG_API_KEY
 }
 
 # The payload is the content of your blog post, organized into three JSON key/value pairs
