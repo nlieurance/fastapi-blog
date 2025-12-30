@@ -21,8 +21,6 @@ Want to see all posts and print out the titles? This code would do it:
 ```python
 import requests
 
-# This code shows how you might use Python to get all existing blog posts. 
-
 # This is the endpoint for getting posts
 url = "https://fastapi-blog-4lg9.onrender.com/posts"
 
@@ -41,8 +39,6 @@ Feel like creating a new post? Check out this example code:
 
 ```python
 import requests
-
-# This code shows how you might use Python to create a new post. 
 
 # You could paste this code into a new file, replace the payload with your own content,save the file with a .py extension, and run it in your computer's terminal.
 
