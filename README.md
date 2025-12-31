@@ -16,7 +16,7 @@ When viewing the main.py file, you can see the list that stores blog posts in th
 posts: list[Post] = [ ]
 ```
 ## Dependencies
-The `requirements.txt` file lists all the dependencies that Render must install to build the app.
+I've deployed this code on Render, a PaaS (Platform as a Service) tool. The `requirements.txt` file lists all the dependencies that Render must install to build the app.
 
 ## Python requests
 Here's some code to show you how you might interact with this API via Python.
