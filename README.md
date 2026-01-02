@@ -62,8 +62,8 @@ headers = {
 
 # The payload is the content of your blog post, organized into three JSON key/value pairs
 payload = {
-    "title": "One more additional post",
-    "content": "This is yet another post from example2.py",
+    "title": "Read This Amazing Post",
+    "content": "This post may be short. But it's also super great!",
     "published": True
 }
 
