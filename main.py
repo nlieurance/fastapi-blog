@@ -21,8 +21,6 @@ class PostCreate(BaseModel):
 # Storage for posts
 posts: list[Post] = [ ]
 
-
-
 # A function to check for and validate the API key
 def checkKey(x_api_key: str = Header(default=None)):
     if API_KEY is None:
@@ -39,6 +37,15 @@ def checkKey(x_api_key: str = Header(default=None)):
 @app.get("/")
 async def root():
     return {"message": "Welcome to Nick's API-based blog project."}
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+# The message that appears at the base URL
+@app.get("/")
+async def root():
+    return {"message": "Welcome to Nick's API-based blog!"}
 
 # Routes (endpoints)
 

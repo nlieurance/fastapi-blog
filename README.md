@@ -1,0 +1,81 @@
+# About this repo
+
+This is an API-based blog I built to learn the basics of FastAPI. It allows a user to: 
+- Get all posts.
+- Get a post by ID.
+- Create a new post.
+- Delete a post.
+
+At the moment, there's no database. Posts live inside a Python list. 
+
+## Blog storage
+When viewing the main.py file, you can see the list that stores blog posts in the following code.
+
+```python
+# Storage for posts
+posts: list[Post] = [ ]
+```
+## Dependencies
+I've deployed this code on Vercel, a PaaS (Platform as a Service) tool. The `requirements.txt` file lists all the dependencies that Vercel must install to build the app.
+
+## Python requests
+Here's some code to show you how you might interact with this API via Python.
+
+### Get posts
+Want to see all posts and print out the titles? This code would do it:
+
+```python
+import requests
+
+# This is the endpoint for getting posts
+url = "https://fastapi-blog-eta.vercel.app/posts"
+
+# The r variable stores the request as an object 
+r = requests.get(url)
+
+# The post variable turns the request into Python dictionaries so they're easy to work with
+posts = r.json()
+
+# This loop prints all post titles to the terminal
+for i in posts:
+    print(i['title'])
+```
+### Create a post
+To create a post, you must have an API key. I'm the only person with that honor. But here's some code to show you how posting could work:
+
+```python
+import requests
+import os
+
+# You could paste this code into a new file, replace the payload with your own content,save the file with a .py extension, and run it in your computer's terminal.
+
+# Your request must contain an API key 
+API_KEY = os.getenv("BLOG_API_KEY")
+
+# This is the endpoint for creating posts
+url = "https://fastapi-blog-eta.vercel.app/posts"
+
+# This adds the API key to the HTTP header, which is necessary for creating a post
+headers = {
+    "x-api-key": API_KEY
+}
+
+# The payload is the content of your blog post, organized into three JSON key/value pairs
+payload = {
+    "title": "Read This Amazing Post",
+    "content": "This post may be short. But it's also super great!",
+    "published": True
+}
+
+# The r variable stores the request as an object
+r = requests.post(url, json=payload, headers=headers)
+
+# Post stores the request (r) as json
+post = r.json()
+
+# This prints some text in the terminal so you have the new post id
+print("Created post" , post['id'])
+```
+
+
+
