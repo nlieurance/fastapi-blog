@@ -28,7 +28,7 @@ Want to see all posts and print out the titles? This code would do it:
 import requests
 
 # This is the endpoint for getting posts
-url = "https://fastapi-blog-4lg9.onrender.com/posts"
+url = "https://fastapi-blog-eta.vercel.app/posts"
 
 # The r variable stores the request as an object 
 r = requests.get(url)
@@ -53,7 +53,7 @@ import os
 API_KEY = os.getenv("BLOG_API_KEY")
 
 # This is the endpoint for creating posts
-url = "https://fastapi-blog-4lg9.onrender.com/posts"
+url = "https://fastapi-blog-eta.vercel.app/posts"
 
 # This adds the API key to the HTTP header, which is necessary for creating a post
 headers = {
