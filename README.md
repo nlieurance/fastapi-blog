@@ -6,7 +6,7 @@ This is an API-based blog I built to learn the basics of FastAPI. It allows a us
 - Create a new post.
 - Delete a post.
 
- At the moment, there's no database. Posts live inside a Python list. 
+At the moment, there's no database. Posts live inside a Python list. 
 
 ## Blog storage
 When viewing the main.py file, you can see the list that stores blog posts in the following code.
@@ -16,7 +16,7 @@ When viewing the main.py file, you can see the list that stores blog posts in th
 posts: list[Post] = [ ]
 ```
 ## Dependencies
-I've deployed this code on Render, a PaaS (Platform as a Service) tool. The `requirements.txt` file lists all the dependencies that Render must install to build the app.
+I've deployed this code on Vercel, a PaaS (Platform as a Service) tool. The `requirements.txt` file lists all the dependencies that Vercel must install to build the app.
 
 ## Python requests
 Here's some code to show you how you might interact with this API via Python.
