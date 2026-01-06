@@ -1,7 +1,5 @@
 from fastapi import Depends, Header, FastAPI, HTTPException, status
 from pydantic import BaseModel
-from dotenv import load_dotenv
-load_dotenv()
 import os
 API_KEY = os.getenv("BLOG_API_KEY")
 
@@ -38,7 +36,9 @@ def checkKey(x_api_key: str = Header(default=None)):
             detail="Invalid or missing API key"
         )
     
-    
+@app.get("/")
+async def root():
+    return {"message": "Welcome to Nick's API-based blog project."}
 
 # Routes (endpoints)
 
