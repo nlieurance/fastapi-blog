@@ -41,7 +41,7 @@ for i in posts:
     print(i['title'])
 ```
 ### Create a post
-Feel like creating a new post? Check out this example code:
+To create a post, you must have an API key. I'm the only person with that honor. But here's some code to show you how posting could work:
 
 ```python
 import requests
